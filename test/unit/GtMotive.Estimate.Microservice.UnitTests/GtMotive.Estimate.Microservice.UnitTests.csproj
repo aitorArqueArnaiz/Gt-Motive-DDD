@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Api\**" />
+    <Compile Remove="ApplicationCore\**" />
+    <Compile Remove="Domain\**" />
+    <Compile Remove="Infrastructure\**" />
+    <EmbeddedResource Remove="Api\**" />
+    <EmbeddedResource Remove="ApplicationCore\**" />
+    <EmbeddedResource Remove="Domain\**" />
+    <EmbeddedResource Remove="Infrastructure\**" />
+    <None Remove="Api\**" />
+    <None Remove="ApplicationCore\**" />
+    <None Remove="Domain\**" />
+    <None Remove="Infrastructure\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Moq" Version="4.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\GtMotive.Estimate.Microservice.Api\GtMotive.Estimate.Microservice.Api.csproj" />
+    <ProjectReference Include="..\..\..\src\GtMotive.Estimate.Microservice.ApplicationCore\GtMotive.Estimate.Microservice.ApplicationCore.csproj" />
+    <ProjectReference Include="..\..\..\src\GtMotive.Estimate.Microservice.Infrastructure\GtMotive.Estimate.Microservice.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
